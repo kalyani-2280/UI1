@@ -1,0 +1,268 @@
+/* src/App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom CSS follows */
+/* ... (rest of your provided CSS) ... */         
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+.header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+.medhavi-logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a5568;
+}
+.medhavi-logo-icon {
+    width: 35px; /* Adjust size for the logo icon */
+    height: 35px;
+    margin-right: 10px;
+    /* Placeholder for a technical/AI brain icon */
+    background-image: url('https://placehold.co/35x35/f0f2f5/4a5568?text=🧠');
+    background-size: cover;
+    border-radius: 50%;
+}
+.nav-link {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #4a5568;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent; /* Added for hover effect */
+}
+.nav-link.active {
+    background-color: #f97316;
+    color: #ffffff;
+    border-color: #f97316;
+}
+.nav-link:hover:not(.active) {
+    background-color: #edf2f7;
+    border-color: #f97316; /* Orange border on hover */
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+    border: 2px solid transparent; /* Added for hover effect */
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #f97316; /* Orange border on hover */
+}
+.icon-box {
+    background-color: #f0f2f5;
+    border-radius: 50%;
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    overflow: hidden; /* Ensure content stays within circle */
+}
+.icon-box span {
+    font-size: 3em; /* Increased emoji size to fit larger circle */
+}
+.gradient-button {
+    background: linear-gradient(to right, #f97316, #fb923c);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+.gradient-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+.footer-dots span.active {
+    background-color: #f97316;
+}
+.footer-text {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 0.9em;
+}
+
+/* Specific styles for Image Editing page */
+.upload-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+.upload-area:hover {
+    border-color: #f97316; /* Orange border on hover */
+}
+.editing-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.tool-item {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #4a5568;
+    transition: background-color 0.2s ease, border-color 0.3s ease;
+    border: 2px solid transparent; /* Added for hover effect */
+}
+.tool-item:hover {
+    background-color: #e2e8f0;
+    border-color: #f97316; /* Orange border on hover */
+}
+.tool-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* For emoji icons */
+}
+
+/* Custom icons (using emojis for simplicity, can be replaced with SVGs) */
+.icon-healthcare::before { content: '🏥'; }
+.icon-image-editing::before { content: '🎨'; }
+.icon-education::before { content: '📚'; }
+.icon-upload::before { content: '⬆️'; }
+.icon-ai-art::before { content: '✨'; }
+.icon-image-placeholder::before { content: '🖼️'; font-size: 4em; }
+.icon-crop::before { content: '✂️'; }
+.icon-rotate::before { content: '🔄'; }
+.icon-resize::before { content: '↔️'; }
+.icon-brightness::before { content: '☀️'; }
+.icon-contrast::before { content: '⚫⚪'; }
+.icon-filters::before { content: '🌈'; }
+.icon-symptoms::before { content: '📝'; }
+.icon-upload-image-healthcare::before { content: '📸'; }
+.icon-ai-health-analysis::before { content: '🧠'; }
+.icon-education-ai::before { content: '🎓'; }
+.icon-book::before { content: '📖'; font-size: 4em; }
+
+/* Aesthetic font for "Welcome to MEDHAVI" */
+.homepage-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Background Images with Indian Theme */
+.page-background {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    position: relative;
+    z-index: 0;
+    padding-top: 1px; /* Small padding to ensure background covers content */
+    padding-bottom: 1px;
+    transition: background-image 1s ease-in-out; /* Smooth transition for background images */
+}
+.page-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+    z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .nav-links {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-link {
+        margin: 5px;
+    }
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    .editing-tools-grid {
+        grid-template-columns: 1fr;
+    }
+    .homepage-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Loading indicator styles */
+.loading-indicator {
+    display: block; /* Default to block so it can be controlled by React state */
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #f97316; /* Orange */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 8px; /* Added margin for button spacing */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
